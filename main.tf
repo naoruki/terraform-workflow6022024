@@ -5,11 +5,11 @@ provider "aws" {
 terraform {
   backend "s3" {
     bucket = "sctp-ce8-tfstate"
-    key    = "cornelia-activity.tfstate"  # Ensure this is unique
+    key    = "cornelia-activity.tfstate" # Ensure this is unique
     region = "ap-southeast-1"
   }
 }
-  
+
 data "aws_caller_identity" "current" {}
 
 locals {
